@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: lightslategray;
+}
+.list {
+  display: flex;
+  flex-flow: column wrap;
+  flex-basis: 30rem;
+  align-items: center;
+}
+.item-list {
+  list-style: none;
+}
+.btn {
+  margin-top: 20px;
+  padding: 5px;
+}
+.add {
+  padding: 10px;
+}

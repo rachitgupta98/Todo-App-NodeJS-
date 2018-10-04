@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="/list.js"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <form id="submit" method="POST" action="/show">
+        <h1>Todo app</h1>
+        <input type="text" class="add" name="item" placeholder="add item" required>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+    <div class="list">
+        <ul class="item-list">
+            <% todos.forEach(function(todo, index) { %>
+                <li>
+                    <a href="/show/<%= index %>">✘</a>
+                    <%= todo.item %>
+                </li>
+                <% }); %>
+        </ul>
+    </div>
+</body>
+
+</html>
